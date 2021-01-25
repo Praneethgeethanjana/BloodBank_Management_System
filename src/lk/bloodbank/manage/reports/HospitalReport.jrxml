@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-10T18:09:07 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HospitalReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="069e2661-8800-450a-a1f5-5caf915125c9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Hospital Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Hospital]]>
+	</queryString>
+	<field name="HID" class="java.lang.String"/>
+	<field name="Hospital_Name" class="java.lang.String"/>
+	<field name="Address" class="java.lang.String"/>
+	<field name="Type" class="java.lang.String"/>
+	<field name="Telephone" class="java.lang.String"/>
+	<group name="HID">
+		<groupExpression><![CDATA[$F{HID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="20" width="150" height="30" uuid="1e49866d-d9b6-460a-86c9-04006046221e"/>
+				<textElement>
+					<font size="19" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Hospital List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="10" width="100" height="30" uuid="8de958c2-1d76-4061-bf10-0dc361b13844"/>
+				<text><![CDATA[HID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="10" width="100" height="30" uuid="3ad53394-8bb0-476f-b207-a16df26de38d"/>
+				<text><![CDATA[Hospital_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="10" width="110" height="30" uuid="c234cc9a-4796-4fb4-93f4-ded5f575f4e9"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="10" width="90" height="30" uuid="86ee478e-ad55-480a-9730-a878cfe90651"/>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="10" width="100" height="30" uuid="8f4adcda-0bea-402c-88dd-a5c2c3a62f80"/>
+				<text><![CDATA[Telephone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="-11" y="40" width="100" height="30" uuid="cb569058-95cd-4e65-9715-6bdcaa07c4e3"/>
+				<textFieldExpression><![CDATA[$F{HID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="40" width="100" height="30" uuid="b3504a7d-bdc5-4ef5-9fb4-0adfd2e3749f"/>
+				<textFieldExpression><![CDATA[$F{Hospital_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="40" width="110" height="30" uuid="709ab653-bbca-4bb0-b4bd-f4880f0cb527"/>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="40" width="90" height="30" uuid="36b32fb3-cfa6-4d09-9c2c-eb0055102626"/>
+				<textFieldExpression><![CDATA[$F{Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="40" width="100" height="30" uuid="e3643501-6cd3-464d-8cec-027bd1f4aa4c"/>
+				<textFieldExpression><![CDATA[$F{Telephone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

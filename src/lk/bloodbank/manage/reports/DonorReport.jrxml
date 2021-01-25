@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-10T17:06:57 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DonorReport" pageWidth="842" pageHeight="1190" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7e395c97-2b2d-4fb4-b9f5-903288f3967c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BloodBank data adapter"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Donor]]>
+	</queryString>
+	<field name="DID" class="java.lang.String"/>
+	<field name="Donor_Name" class="java.lang.String"/>
+	<field name="NIC" class="java.lang.String"/>
+	<field name="Gender" class="java.lang.String"/>
+	<field name="dob" class="java.lang.String"/>
+	<field name="Address" class="java.lang.String"/>
+	<field name="BloodGroup" class="java.lang.String"/>
+	<field name="Contact" class="java.lang.String"/>
+	<field name="Email" class="java.lang.String"/>
+	<group name="DID">
+		<groupExpression><![CDATA[$F{DID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement x="121" y="0" width="335" height="60" uuid="f1fabe47-78ed-4aef-bb77-8edfecf2f2c9"/>
+				<textElement>
+					<font size="22" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Donor List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="10" width="60" height="30" uuid="bbac131a-6296-4313-b1dc-8b8b77578b62"/>
+				<text><![CDATA[DID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="10" width="70" height="30" uuid="cec77c86-1a44-461c-96eb-d9a0b298dc6f"/>
+				<text><![CDATA[Donor_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="10" width="90" height="30" uuid="7b22f2ac-8123-4483-8e37-3d6e8da30e0d"/>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="10" width="60" height="30" uuid="9d912b69-43c7-48a7-98c5-07066e5ad172"/>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="10" width="90" height="30" uuid="ae85dc72-6942-419a-9956-ce9724ced343"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="10" width="60" height="30" uuid="32204527-548b-4da5-973f-aa03a98fcd43"/>
+				<text><![CDATA[BloodGroup]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="590" y="10" width="67" height="30" uuid="37c941ca-8445-4498-a561-cea31e811dc9"/>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="690" y="10" width="82" height="30" uuid="a45cfecb-5432-4db8-9492-90c90a38f3dc"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="10" width="70" height="30" uuid="fb3747d9-b7a4-4237-93b3-e8cced278475"/>
+				<text><![CDATA[dob]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="30" width="60" height="30" uuid="061098c8-d932-4583-81f4-ab7a3062cace"/>
+				<textFieldExpression><![CDATA[$F{DID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="30" width="70" height="30" uuid="ce621580-f3ff-40eb-87d9-72e6019d8cad"/>
+				<textFieldExpression><![CDATA[$F{Donor_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="30" width="80" height="30" uuid="0053bea3-0f80-420a-be45-f8309c185661"/>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="30" width="60" height="30" uuid="929d9eec-1fe9-4bd9-8a35-9ca08b03a1d8"/>
+				<textFieldExpression><![CDATA[$F{Gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="30" width="70" height="30" uuid="ea46cc35-9c5b-40ad-a4a9-ef268096ff37"/>
+				<textFieldExpression><![CDATA[$F{dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="30" width="80" height="30" uuid="391f45f3-0403-444d-9842-673df44feccc"/>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="30" width="66" height="30" uuid="cb57109a-2efa-4edb-abd2-46ef0be79d8d"/>
+				<textFieldExpression><![CDATA[$F{BloodGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="590" y="30" width="67" height="30" uuid="a172ca15-0e05-496b-9025-8d642cd2c882"/>
+				<textFieldExpression><![CDATA[$F{Contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="690" y="30" width="90" height="30" uuid="ea46a038-0242-48ac-a2dd-745501ee2614"/>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="114" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
